@@ -3,16 +3,12 @@ import "./Movie.css";
 import {
   API_URL,
   API_KEY,
-  IMAGE_URL,
-  BACKDROP_SIZE,
-  POSTER_SIZE
 } from "../../../config";
 import Navigation from "../Navigation/Navigation";
 import MovieInfo from "../MovieInfo/MovieInfo";
 import MovieInfoBar from "../MovieInfoBar/MovieInfoBar";
 import Grid from "../Grid/Grid";
 import Actor from "../Actor/Actor";
-import Spinner from "../Spinner/Spinner";
 
 export default class Movie extends Component {
   constructor(props) {
@@ -56,7 +52,6 @@ export default class Movie extends Component {
               fetch(url)
                 .then(result => result.json())
                 .then(result => {
-                  console.log(result);
                   const directors = result.crew.filter(
                     elem => elem.job === "Director"
                   );
@@ -87,6 +82,7 @@ export default class Movie extends Component {
               time={this.state.movie.runtime}
               budget={this.state.movie.budget}
               revenue={this.state.movie.revenue}
+              release_date={this.state.movie.release_date}
             />
           </div>
         ) : null}

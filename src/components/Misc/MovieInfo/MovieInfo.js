@@ -1,11 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { IMAGE_URL, POSTER_SIZE, BACKDROP_SIZE } from "../../../config";
-import FontAwesome from "react-fontawesome";
 import MovieItem from "../MovieItem/MovieItem";
 import "./MovieInfo.css";
 
 const MovieInfo = props => {
-  console.log(props);
   return (
     <div
       className="movieinfo"
@@ -32,7 +30,7 @@ const MovieInfo = props => {
           <p>{props.movie.overview}</p>
           <div>
             <h3>
-              <bold>TMDB Rating:</bold> <span>{props.movie.vote_average}</span>{" "}
+              TMDB Rating:<span>{props.movie.vote_average}</span>{" "}
             </h3>
             <meter
               min="0"
@@ -59,7 +57,7 @@ const MovieInfo = props => {
           {props.genres.map((elem, i) => {
             return (
               <span key={i} className="director">
-                <bold> {elem.name} |</bold>
+                 <i> {elem.name} | </i>
               </span>
             );
           })}

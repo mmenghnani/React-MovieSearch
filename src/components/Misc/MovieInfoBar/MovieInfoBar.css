@@ -17,14 +17,14 @@
 
 .movieinfobar-content-col {
   float: left;
-  width: 33.33%;
+  width: 25%;
   box-sizing: border-box;
   padding: 10px 20px 0 0;
 }
 
 .movieinfobar-info {
   padding: 5px 0 0 10px;
-  float: left;
+  float: center;
 }
 
 .fa-time, .fa-revenue {

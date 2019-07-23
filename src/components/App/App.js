@@ -13,7 +13,7 @@ function App() {
         <React.Fragment>
           <Header />
           <Switch>
-            <Route path="/home" component={HomePage} exact />
+            <Route path="/" component={HomePage} exact />
             <Route path="/:movieId" component={Movie} exact />
             <Route component={NotFound} />
           </Switch>

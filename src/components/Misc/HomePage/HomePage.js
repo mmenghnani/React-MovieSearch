@@ -36,18 +36,14 @@ class HomePage extends Component {
   }
 
   loadMoreItems = () => {
-    let url = "";
     this.setState({
       isLoading: true
     });
-
+    let url = `${API_URL}movie/popular?api_key=${API_KEY}&langugage=en-us&`;
     if (this.state.search === "") {
-      url = `${API_URL}movie/popular?api_key=${API_KEY}&langugage=en-us&page=${this
-        .state.currentPage+1}`;
+      url += `page=${this.state.currentPage+1}`;
     } else {
-      url = `${API_URL}movie/popular?api_key=${API_KEY}&langugage=en-us&query=${
-        this.state.search
-      }&page=1`;
+      url += `query=${this.state.search}&page=1`;
     }
     this.fetchResults(url);
   };
@@ -65,7 +61,6 @@ class HomePage extends Component {
     } else {
       url = `${API_URL}search/movie?api_key=${API_KEY}&language=en-us&query=${search}&page=1`;
     }
-    console.log(url);
     this.fetchResults(url);
   };
 

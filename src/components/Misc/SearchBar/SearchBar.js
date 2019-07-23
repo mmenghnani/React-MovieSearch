@@ -14,11 +14,7 @@ export default class SearchBar extends Component {
         this.setState({
             value : event.target.value
         })
-        clearTimeout(this.timeout)
-        this.timeout = setTimeout(() => {
-            this.props.callback(this.state.value)
-        },500);
-        console.log(this.state.value)
+        this.props.callback(this.state.value)
     }
 
     render() {
@@ -26,7 +22,7 @@ export default class SearchBar extends Component {
             <div className="searchbar">
                 <div className="searchbar-content">
                     <FontAwesome className="search" name="search" />
-                    <input type="text" className="searchbar-input" placeholder="Search" 
+                    <input type="text" className="searchbar-input" placeholder="Enter the movie name" 
                         onChange={this.doSearch}
                         value={this.state.value}
                     />
