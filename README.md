@@ -13,9 +13,10 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 ## Home Page
-On the home page, you can see the list of popular movies
-You can also search any specific movie that you want to find details for
-Clicking on any of the appTiles on the home page will take you to the home page for that specific movie
+On the home page, you can 
+1) see the list of popular movies
+2) search a name and get the list of movies matching that criteria. 
+3) Clicking on any of the movie Tiles on the home page will take you to the detailed page for that specific movie
 
 ## Movie Page
 On the movie page, you can find all the details about movie like the storyline, budget, revenue, release date, cast etc.
