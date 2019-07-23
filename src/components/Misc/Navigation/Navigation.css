@@ -1,0 +1,28 @@
+.navigation {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  color: #353535;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.navigation-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navigation-content p {
+  font-family: "Abel", sans-serif;
+  font-size: 22px;
+  float: left;
+  color: #353535;
+  padding-right: 10px;
+  text-decoration: none;
+  margin: 0;
+  cursor : pointer;
+}
